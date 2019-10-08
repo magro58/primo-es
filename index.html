@@ -14,40 +14,54 @@ body{
   background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
 }
 
+#hiddentb{
+  visibility: hidden;
+}
+
 </style>
 
-<scrypt>
+<script>
 
+  function myFunction() {
+    var tab=document.getElementsById("hiddentb");
+    var row=document.getElementsById("hiddenrw");
+    var clone=row.cloneNode(true);
+    var table=document.getElementById("tro");
+    table.appendChild(clone);
+  }
 
-
-</scrypt>
+</script>
 
 </head>
 
 <body>
 
-<table align=center>
+  <table align=center id="hiddentb">
+
+    <tr id="hiddenrw">
+
+      <td> <input type="text" name="t1" placeholder="Nome"/>  </td>
+      <td> <input type="text" name="t2" placeholder="Cognome"/>  </td>
+      <td> <input type="text" name="t3" placeholder="Data Nascita"/>  </td>
+
+    </tr>
+
+  </table>
+
+<table id="tro" align=center>
 
   <tr>
 
-    <td><font size=5>Nome: </font></td>
-    <td><font size=5>Cognome: </font></td>
-    <td><font size=5>Data Nascita: </font></td>
-
-  </tr>
-
-  <tr>
-
-    <td> <input type="text" name="t1"/>  </td>
-    <td> <input type="text" name="t2"/>  </td>
-    <td> <input type="text" name="t3"/>  </td>
+    <td> <input type="text" name="t1" placeholder="Nome"/>  </td>
+    <td> <input type="text" name="t2" placeholder="Cognome"/>  </td>
+    <td> <input type="text" name="t3" placeholder="Data Nascita"/>  </td>
 
   </tr>
 
 </table>
 
 <center>
-<button type="submit" name="btn">Invia</button>
+<button type="button" id="btn" onclick="myFunction()">Aggiungi riga</button>
 <br>
 <br>
 <img src="http://zkb.com.au/wp-content/uploads/2014/04/pfudor.gif">
