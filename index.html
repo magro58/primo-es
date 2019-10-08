@@ -1,52 +1,40 @@
 <!DOCTYPE html>
 <html>
 
+ <table align=center id="hiddentb">
+
+   <tr id="hiddenrw">
+
+     <td> <input type="text" name="t0" placeholder="Nome"/>  </td>
+     <td> <input type="text" name="t01" placeholder="Cognome"/>  </td>
+     <td> <input type="text" name="t02" placeholder="Data Nascita"/>  </td>
+
+   </tr>
+
+ </table>
+
 <head>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <title>Index.html</title>
 
 <style>
-
 body{
   height: 55px;
   background-color: red;
   background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
 }
-
 #hiddentb{
   visibility: hidden;
 }
-
 </style>
 
-<script>
-
-  function myFunction() {
-    var tab=document.getElementsById("hiddentb");
-    var row=document.getElementsById("hiddenrw");
-    var clone=row.cloneNode(true);
-    var table=document.getElementById("tro");
-    table.appendChild(clone);
-  }
-
-</script>
 
 </head>
 
 <body>
 
-  <table align=center id="hiddentb">
-
-    <tr id="hiddenrw">
-
-      <td> <input type="text" name="t1" placeholder="Nome"/>  </td>
-      <td> <input type="text" name="t2" placeholder="Cognome"/>  </td>
-      <td> <input type="text" name="t3" placeholder="Data Nascita"/>  </td>
-
-    </tr>
-
-  </table>
+<script src="js.js"></script>
 
 <table id="tro" align=center>
 
@@ -61,7 +49,9 @@ body{
 </table>
 
 <center>
-<button type="button" id="btn" onclick="myFunction()">Aggiungi riga</button>
+<button type="button" id="btn" onclick="addline()">Aggiungi riga</button>
+<button type="button" id="btn1" onclick="audio.play()">PLAY MUSIC</button>
+<button type="button" id="btn1" onclick="audio.pause()">STOP MUSIC</button>
 <br>
 <br>
 <img src="http://zkb.com.au/wp-content/uploads/2014/04/pfudor.gif">
